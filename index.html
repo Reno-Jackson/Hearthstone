@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='HearthstoneApp'>
+
+<head>
+    <meta charset='utf-8'>
+    <title>git.Hearthstoned</title>
+
+    <!-- JS Script tags go here, my own JS is always at bottom -->
+
+    <script src='//cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js'></script>
+    <script src='//cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js'></script>
+    <script src='//ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-route.js'></script>
+    <script src='main.js'></script>
+
+    <!--CSS link tags go here, my own CSS is always at bottom  -->
+
+    <link rel='stylesheet' href='//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.css'>
+    <link rel='stylesheet' href='//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+    <link rel='stylesheet' href='//fonts.googleapis.com/css?family=Francois+One'>
+    <link rel='stylesheet' href='style.css'>
+    <link rel='shortcut icon' href='./images/hs-favicon.ico' type='image/x-icon' />
+
+    <style>
+        /* Remove the navbar's default margin-bottom and rounded borders */
+
+        .navbar {
+            margin-bottom: 0;
+            border-radius: 0;
+        }
+        /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+
+        .row.content {
+            height: 450px
+        }
+        /* Set gray background color and 100% height */
+
+        .sidenav {
+            padding-top: 20px;
+            background-color: #f1f1f1;
+            height: 100%;
+        }
+        /* Set black background color, white text and some padding */
+
+        footer {
+            background-color: #555;
+            color: white;
+            padding: 25px;
+        }
+        /* On small screens, set height to 'auto' for sidenav and grid */
+
+        @media screen and (max-width: 767px) {
+            .sidenav {
+                height: auto;
+                padding: 15px;
+            }
+            .row.content {
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body ng-controller='CardController as deckCtrl'>
+
+
+    <!--Controls for the top of the page button  -->
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
+
+    <!--Top of the Navbar-->
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+                <div class="nav navbar-nav navbar-left">
+                    <img src='./images/hs-symbol.png' style='width:25%' />
+                    <span style='color:white'>
+                    git.Hearthstoned Inc.
+                    </span>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/"><span class='glyphicon glyphicon-home'></span> Home</a></li>
+                    <li><a href="/contact"><span class='glyphicon glyphicon-envelope'></span> Contact Us</a></li>
+                    <li><a href="#classes"><span class='glyphicon glyphicon-th'></span> Classes</a></li>
+                    <li><a href="//us.battle.net/account/download/?show=hearthstone&style=hearthstone" target="_blank"><span class='glyphicon glyphicon-knight'></span> Play Hearthstone</a></li>
+                    <li><a href='#'><span class='glyphicon glyphicon-user'></span> Sign-Up</a></li>
+                    <li><a href='#'><span class='glyphicon glyphicon-log-in'></span> Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!--Top Style of the page  -->
+    <div class='jumbotron'>
+        <img src='./images/Hearthstone_Logo.png' style='width:70%' />
+    </div>
+
+
+    <!--Begining of Carousel-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner" role="listbox">
+            <div class="item active">
+                <img src='./images/medivh-karazhan.jpg'>
+                <div class="carousel-caption">
+                    <img style='width:40%' src='./images/karazhan-logo.png' />
+                    <h2 class='blackborder'>Medivh is throwing a Party and you're invited</h2>
+                    <button class='btn btn-primary btn-lg whiteoutline' type='button' name='button'><a class='nostyle' href="//us.battle.net/shop/en/product/hearthstone-one-night-in-karazhan" target="_blank">Get Latest Expansion</a></button>
+                </div>
+            </div>
+        </div>
+    </div><br>
+
+
+    <!--Search Bar starts here-->
+    <!-- <div class="container">
+        <div class="row">
+            <div class="col-xs-8 col-xs-offset-2">
+                <div class="input-group">
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                        	<span id="search_concept">Filter by</span><span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#all">All Cards</a></li>
+                            <li><a href="#basic">Basic Set</a></li>
+                            <li><a href="#classic">Classic Set</a></li>
+                            <li><a href="#naxx">Curse of Naxxramus</a></li>
+                            <li><a href="#gvg">Goblins and Gnomes</a></li>
+                            <li><a href="#brkm">Blackrock Mountain</a></li>
+                            <li><a href="#tgt">The Grand Tournamnt</a></li>
+                            <li><a href="#loe">League of Explorers</a></li>
+                            <li><a href="#wotog">Whispers of the Old Gods</a></li>
+                            <li><a href="#onik">One Night in Karazhan</a></li>
+                        </ul>
+                    </div>
+                    <input ng-model='deckCtrl.searchCards' type="hidden" name="search_param" value="all" id="search_param">
+                    <input type="text" class="form-control" name="x" placeholder="Search for Cards">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div> -->
+
+
+    <!--ng-view section for looking at the top of the page -->
+    <article ng-view>
+    </article>
+    <br>
+</body>
+
+<!--Footer Area  -->
+<footer class="container-fluid text-center well">
+    <img src='./images/tupac.png' style='width:15%' />
+    <h4 class="text-center blackborder">&copy; Copyright 2016 Heartstoned Inc. & Thug Life Productions, LLC</h4>
+    <h4 class="text-center blackborder"><a name="contact"></a>Contact Us admin@jdporter.com</h4>
+</footer>
+
+</html>

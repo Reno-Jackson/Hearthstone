@@ -1,0 +1,48 @@
+<!--Hero Bio Page View for Cards  -->
+
+<!--Image to Button Area -->
+
+<img id='banner' ng-src="{{deckCtrl.classBackground}}" />
+<img id='heropower' style='width:25%' ng-src="{{deckCtrl.heroPower}}" />
+<div>
+    <div class="profile">
+        <h3 id='herodesc'>{{deckCtrl.classDesc}}</h3>
+    </div>
+</div>
+
+<h1 class='title'>Scroll through the {{deckCtrl.charClass}} Gallery</h1>
+<br>
+<button class='cardclick' type="button" name="button" data-container="body" data-toggle="popover" data-placement="bottom" title="Card Info:" data-content="{{cards.flavor || 'No flavor text bitch!'}}" ng-repeat="cards in deckCtrl.getCards" ng-init="$last ? deckCtrl.initPopovers() : angular.noop()">
+    <img style='width=300px height=300px' ng-src="{{cards.imgGold}}">
+</button>
+
+<!-- filter: deckCtrl.searchCards -->
+<script type="text/javascript">
+</script>
+
+<!--Pagination for Loaded Card images  -->
+
+<!-- <nav class="text-center " id="paginator" ng-if="deckCtrl.getCards.matches" aria-label="page navigation">
+    <ul class="pagination pagination-lg">
+        <li>
+            <a class="numbackground " href="# " aria-label="Previous ">
+                <span aria-hidden="true ">&laquo;</span>
+            </a>
+        </li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(1) " href="# ">1</a></li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(2) " href="# ">2</a></li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(3) " href="# ">3</a></li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(4) " href="# ">4</a></li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(5) " href="# ">5</a></li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(6) " href="# ">6</a></li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(7) " href="# ">7</a></li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(8) " href="# ">8</a></li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(9) " href="# ">9</a></li>
+        <li><a class="numbackground" ng-click="deckCtrl.getPage(10) " href="# ">10</a></li>
+        <li>
+            <a class="numbackground " href="# " aria-label="Next ">
+                <span aria-hidden="true ">&raquo;</span>
+            </a>
+        </li>
+    </ul>
+</nav> -->

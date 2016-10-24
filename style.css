@@ -1,0 +1,191 @@
+/*Design for scroll to top button*/
+
+#return-to-top {
+    background: #7a694f;
+    background: rgb(0, 0, 0);
+    border-radius: 35px;
+    bottom: 20px;
+    color: rgba(0, 0, 0, 0.7);
+    display: block;
+    display: none;
+    height: 50px;
+    position: fixed;
+    right: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 50px;
+    -moz-border-radius: 35px;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-border-radius: 35px;
+    -webkit-transition: all 0.3s linear;
+}
+
+#return-to-top i {
+    color: #fff;
+    font-size: 19px;
+    left: 16px;
+    margin: 0;
+    position: relative;
+    top: 13px;
+    transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+}
+
+#return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+#return-to-top:hover i {
+    color: #ed9407;
+    top: 5px;
+}
+
+
+/* Extra Things */
+
+body {
+    background: #eee;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h3 {
+    font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    margin-top: 50px;
+}
+
+h3 i {
+    color: #444;
+}
+
+
+/*Design for the major functions of design for git.Hearthstoned*/
+
+body {
+    background-attachment: fixed;
+    background-image: url('./images/background-color.jpg');
+    background-repeat: round;
+    font-family: 'Francois One', sans-serif;
+}
+
+
+/* Design for ID tags*/
+
+#banner {
+    background-attachment: fixed;
+    border: 1px solid black;
+    box-shadow: 0 8px 100px #000, 0 -2px 100px #000;
+    width: 100%;
+}
+
+#herodesc {
+    background-color: rgba (255, 255, 255, .6);
+    color: dodgerblue;
+    text-align: justify;
+    -webkit-text-stroke: 1px goldenrod;
+}
+
+#heropower {
+    display: block;
+    margin: auto;
+    bottom: 150px;
+    width: 25%;
+    position: relative;
+    float: right;
+    right: 10px;
+}
+
+
+/*Design for Class tags*/
+
+.blackborder {
+    -webkit-text-stroke: 1px black;
+}
+
+.cardclick {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    /*margin-left: 100px;*/
+}
+
+.cardclick:active {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 25px;
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+footer.well {
+    background-attachment: fixed;
+    background-image: url('./images/footer-color.jpg');
+    border: 1px solid black;
+    box-shadow: 0 8px 100px #000, 0 -2px 100px #000;
+}
+
+.jumbotron {
+    background-color: transparent;
+    text-align: center;
+}
+
+.moveright {
+    padding-right: 25px;
+}
+
+.noBackground {
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor: pointer;
+    height: 100%;
+    outline: none;
+    overflow: hidden;
+    width: 100%;
+}
+
+.nostyle {
+    color: white;
+    text-decoration: none;
+}
+
+.nostyle:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.profile {
+    background-color: black;
+    border-image: url(./images/profile-outline.gif) 50 50 50 50;
+    border-style: solid;
+    border-width: 50px;
+    box-shadow: 0 8px 100px #000, 0 -2px 100px #000;
+    margin: 100px 20px 0px 20px;
+    padding-left: 10px;
+    -moz-border-image: url(./images/profile-outline.gif) 66 65 60 67 stretch;
+    -o-border-image: url(./images/profile-outline.gif) 66 65 60 67 stretch;
+    -webkit-border-image: url(./images/profile-outline.gif) 66 65 60 67 stretch;
+    box-sizing: border-box;
+}
+
+.title {
+    color: dodgerblue;
+    text-align: justify;
+    -webkit-text-stroke: 1px goldenrod;
+}
+
+.whiteborder {
+    color: firebrick;
+    -webkit-text-stroke: 1px goldenrod;
+}
+
+.whiteoutline {
+    border: 1px solid white;
+}
